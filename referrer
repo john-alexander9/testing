@@ -1,0 +1,13 @@
+<script>
+  
+  var getFeedRef = document.referrer;
+
+window.usabilla_live("data", {
+    custom: {
+        "referrer": getFeedRef
+    }
+});
+
+</script>
+
+//then use custom variable targetting for the campaing - 'referrer' contains 'x'
