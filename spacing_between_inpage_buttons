@@ -1,0 +1,5 @@
+<style>
+.type-end h3, .type-form h3 {
+    padding-bottom: 15px !important;
+}
+</style>
