@@ -1,0 +1,27 @@
+<script>
+
+//function to grab the specific cookie you want
+
+function getCookie(name) {
+  var value = document.cookie;
+  var parts = value.split(name);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+//create a var that holds the value of that cookie using our function
+
+  var cookieValue = getCookie("_ga");
+  
+ //now push that var to the dataLayer so we can send to Usabilla as a custom variable 
+  
+  window.dataLayer.push({'_gaCookie': cookieValue});
+  
+ // send to Usabilla 
+  
+  window.usabilla_live("data", {
+    custom: {
+        "_gaCookie": cookieValue
+    }
+});
+  
+</script>
